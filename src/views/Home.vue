@@ -25,6 +25,11 @@ export default {
         this.movies = response.data;
       });
     },
+    createProduct: function () {
+      var params = {};
+      axios.post("https//localhost:3000/movies", params).then((response) => console.log(response.data));
+      this.movies.push(response.data);
+    },
   },
 };
 </script>
