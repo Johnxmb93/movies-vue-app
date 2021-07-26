@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div v-for="movie in movies" v-bind:key="movie"></div>
-    <h3>{{ movie.title }}</h3>
+    <div v-for="movie in movies" v-bind:key="movie">
+      <h1>{{ movie.title }}</h1>
+    </div>
   </div>
 </template>
 <style></style>
@@ -20,15 +21,10 @@ export default {
   },
   methods: {
     indexMovies: function () {
-      axios.get("http://localhost:3000/movies").then((response) => {
-        console.log(response.data);
+      axios.get("/movies").then((response) => {
         this.movies = response.data;
+        console.log("All Movies", response.data);
       });
-    },
-    createProduct: function () {
-      var params = {};
-      axios.post("https//localhost:3000/movies", params).then((response) => console.log(response.data));
-      this.movies.push(response.data);
     },
   },
 };
