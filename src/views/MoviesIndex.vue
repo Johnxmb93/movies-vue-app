@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <h1>{{ message }}</h1>
-    <div v-for="movie in movies" v-bind:key="movie">
+  <div class="moviesindex">
+    <div v-for="movie in movies" v-bind:key="movie.id">
       <h1>{{ movie.title }}</h1>
     </div>
   </div>
