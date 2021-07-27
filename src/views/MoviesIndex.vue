@@ -1,7 +1,14 @@
 <template>
   <div class="moviesindex">
     <div v-for="movie in movies" v-bind:key="movie.id">
-      <h1>{{ movie.title }}</h1>
+      <router-link v-bind:to="`/movies/${movie.id}`">
+        <h1>{{ movie.title }}</h1>
+      </router-link>
+      Year Released:
+      <h4>{{ movie.year }}</h4>
+      <h4>{{ movie.plot }}</h4>
+      Director:
+      <h4>{{ movie.director }}</h4>
     </div>
   </div>
 </template>

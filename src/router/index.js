@@ -4,6 +4,10 @@ import MoviesIndex from "../views/MoviesIndex.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import MoviesUpdate from "../views/MoviesUpdate.vue";
+import MoviesShow from "../views/MoviesShow.vue";
+import MoviesNew from "../views/MoviesNew.vue";
+
 
 Vue.use(VueRouter);
 
@@ -20,6 +24,9 @@ const routes = [
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
+  { path: "/movies/:id/update", name: "moviesupdate", component: MoviesUpdate },
+  { path: "/movies/:id", name: "moviesshow", component: MoviesShow },
+  { path: "/moviesnew", name: "moviesnew", component: MoviesNew },
 ];
 
 const router = new VueRouter({
