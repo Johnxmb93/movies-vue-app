@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div id="login" class="login">
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
@@ -47,3 +47,11 @@ export default {
   },
 };
 </script>
+
+<style>
+#login {
+  background-color: #000000;
+  border: 100px solid black;
+  margin: 5px;
+}
+</style>

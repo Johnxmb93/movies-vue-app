@@ -2,9 +2,11 @@
   <div class="moviesindex">
     <div v-for="movie in movies" v-bind:key="movie.id">
       <router-link v-bind:to="`/movies/${movie.id}`">
-        <h1>{{ movie.title }}</h1>
+        <h1 id="makeblue">{{ movie.title }}</h1>
       </router-link>
-      Year Released:
+      Did you like this movie?
+      <input type="checkbox" />
+      <p>Year Released:</p>
       <h4>{{ movie.year }}</h4>
       <h4>{{ movie.plot }}</h4>
       Director:
@@ -37,3 +39,10 @@ export default {
 
 // fixed stuff in backend
 </script>
+<style>
+#makeblue {
+  font-size: 150%;
+  font-weight: bold;
+  color: #2600ff;
+}
+</style>

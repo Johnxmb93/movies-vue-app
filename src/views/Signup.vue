@@ -1,28 +1,30 @@
 <template>
   <div class="signup">
-    <form v-on:submit.prevent="submit()">
-      <h1>Signup</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Name:</label>
-        <input type="text" v-model="newUserParams.name" />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newUserParams.email" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newUserParams.password" />
-      </div>
-      <div>
-        <label>Password confirmation:</label>
-        <input type="password" v-model="newUserParams.password_confirmation" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+    <div id="signup">
+      <form v-on:submit.prevent="submit()">
+        <h1>Signup</h1>
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+        </ul>
+        <div>
+          <label>Name:</label>
+          <input type="text" v-model="newUserParams.name" />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="email" v-model="newUserParams.email" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" v-model="newUserParams.password" />
+        </div>
+        <div>
+          <label>Password confirmation:</label>
+          <input type="password" v-model="newUserParams.password_confirmation" />
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   </div>
 </template>
 
@@ -51,3 +53,11 @@ export default {
   },
 };
 </script>
+
+<style>
+#signup {
+  background-color: #000000;
+  border: 150px solid black;
+  margin: 5px;
+}
+</style>
