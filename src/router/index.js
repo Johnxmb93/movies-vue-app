@@ -8,7 +8,6 @@ import MoviesUpdate from "../views/MoviesUpdate.vue";
 import MoviesShow from "../views/MoviesShow.vue";
 import MoviesNew from "../views/MoviesNew.vue";
 
-
 Vue.use(VueRouter);
 
 const routes = [

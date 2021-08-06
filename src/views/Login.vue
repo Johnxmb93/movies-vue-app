@@ -49,9 +49,9 @@ export default {
 </script>
 
 <style>
-#login {
+/* #login {
   background-color: #000000;
   border: 100px solid black;
   margin: 5px;
-}
+} */
 </style>

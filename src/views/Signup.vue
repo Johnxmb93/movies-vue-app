@@ -55,9 +55,9 @@ export default {
 </script>
 
 <style>
-#signup {
+/* #signup {
   background-color: #000000;
   border: 150px solid black;
   margin: 5px;
-}
+} */
 </style>
