@@ -20,7 +20,7 @@
             <a class="nav-link" href="/moviesnew">New Movie</a>
             <a class="nav-link" href="/signup">Signup</a>
             <a class="nav-link" href="/login">Login</a>
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" v-if="isLoggedIn()" href="/logout">Logout</a>
           </div>
         </div>
       </div>
@@ -41,6 +41,16 @@
     </div>
     <router-view /> -->
 
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
+>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
